@@ -3,3 +3,4 @@
 .config/valet/Log
 .config/wireshark
 .config/cherrytree
+.DS_Store
