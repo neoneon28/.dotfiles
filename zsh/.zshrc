@@ -178,6 +178,8 @@ alias pam="php artisan migrate:refresh --seed"
 
 alias cd="z"
 
+alias krs="launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server"
+
 # |====== Eval ======|
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(fnm env --use-on-cd)"
