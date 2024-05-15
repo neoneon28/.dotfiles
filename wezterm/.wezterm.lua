@@ -67,6 +67,14 @@ config.keys = {
 	},
 }
 
+config.keys = {
+	-- Disable Cmd+T (or Super+T on some systems)
+	{
+		key = "t",
+		mods = "CMD",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+}
 -- config.send_composed_key_when_left_alt_is_pressed = true
 -- config.send_composed_key_when_right_alt_is_pressed = true
 

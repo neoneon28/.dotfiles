@@ -6,6 +6,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH #set up for PHP composer
 export PATH=$HOME/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/scripts:$PATH
 
 # export BAT_THEME="Catppuccin Mocha"
 
