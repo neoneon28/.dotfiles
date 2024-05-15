@@ -43,6 +43,8 @@ yabai -m config mouse_drop_action swap
 # List of apps yabai should ignore
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Gestimer$" manage=off
 yabai -m rule --add app="^Walter's Currency Converter.app$" manage=off
+yabai -m rule --add app="^Rize$" manage=off

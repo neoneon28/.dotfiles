@@ -57,6 +57,8 @@ config.window_padding = {
 	bottom = 33,
 }
 
+-- config.default_prog = { 'zel', '-l', 'welcome'}
+
 config.keys = {
 	{
 		key = "c",
@@ -65,7 +67,7 @@ config.keys = {
 	},
 }
 
-config.send_composed_key_when_left_alt_is_pressed = true
-config.send_composed_key_when_right_alt_is_pressed = true
+-- config.send_composed_key_when_left_alt_is_pressed = true
+-- config.send_composed_key_when_right_alt_is_pressed = true
 
 return config

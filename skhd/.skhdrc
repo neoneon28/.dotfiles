@@ -79,10 +79,10 @@
 # Changing window focus
 
 # change focus within space
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
+ctrl + alt - j : yabai -m window --focus south
+ctrl + alt - k : yabai -m window --focus north
+ctrl + alt - h : yabai -m window --focus west
+ctrl + alt - l : yabai -m window --focus east
 
 # change between external displays
 alt -s : yabai -m display --focus west
@@ -107,16 +107,16 @@ shift + alt - m : yabai -m window --toggle zoom-fullscreen
 shift + alt - e : yabai -m space --balance
 
 # Swap windows
-shift + alt - j : yabai -m window --swap south
-shift + alt - k : yabai -m window --swap north
-shift + alt - h : yabai -m window --swap west
-shift + alt - j : yabai -m window --swap east
+shift + alt - k : yabai -m window --wrap north
+shift + alt - j : yabai -m window --wrap south
+shift + alt - h : yabai -m window --wrap west
+shift + alt - l : yabai -m window --wrap east
 
-# Swap windows
-ctrl + alt - j : yabai -m window --wrap south
-ctrl + alt - k : yabai -m window --wrap north
-ctrl + alt - h : yabai -m window --wrap west
-ctrl + alt - j : yabai -m window --wrap east
+# # Swap windows
+# ctrl + alt - j : yabai -m window --wrap south
+# ctrl + alt - k : yabai -m window --wrap north
+# ctrl + alt - h : yabai -m window --wrap west
+# ctrl + alt - l : yabai -m window --wrap east
 
 # move window to display left and right
 shift + alt - s : yabai -m window --display west: yabai -m display --focus west;
@@ -142,3 +142,6 @@ ctrl + alt - s : yabai --stop-service;
 # ctrl + alt - r : yabai --restart-service;
 
 ctrl + alt + cmd - r : yabai --restart-service;
+
+cmd - return : open -n -a "wezterm"
+cmd + shift - return : open -a Finder

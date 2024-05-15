@@ -7,7 +7,7 @@ export PATH=$HOME/.composer/vendor/bin:$PATH #set up for PHP composer
 export PATH=$HOME/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
-export BAT_THEME="Catppuccin Mocha"
+# export BAT_THEME="Catppuccin Mocha"
 
 # |====== PNPM  ======|
 export PNPM_HOME="/Users/no1/Library/pnpm"
@@ -71,7 +71,7 @@ alias vim="nvim" #set default VIM to Neovim
 
 # |======  LS replaement  ======|
 
-alias ls="eza --icons=always"
+alias ls="eza --icons=always --ignore-glob='.git'"
 alias ll="ls -l "
 alias la="ls -la"
 alias lla="ls -la"
@@ -119,7 +119,7 @@ alias pmb="pnpm build"
 alias pmp="pnpm preview"
 
 # |======  Edit Config  ======|
-alias src="source ~/.zshrc"
+alias zsrc="source ~/.zshrc"
 alias zrc="vim ~/.zshrc"
 alias nrc="vim ~/.config/nvim/init.lua" # init.lua
 alias arc="vim ~/.alacritty.yml" # alacritty
@@ -188,3 +188,42 @@ eval "$(zoxide init zsh)"
 mcd() {
   mkdir -p "$1" && cd "$1"
 }
+
+# |====== Prompt ======|
+
+# # Define the colors
+# BOLD_BLUE='%B%F{blue}'
+# YELLOW='%F{yellow}'
+# RESET='%f%b'
+#
+# # Function to update the prompt
+# set_prompt() {
+#     local user_host="${BOLD_BLUE}Aquawolf${YELLOW}@${RESET}${BOLD_BLUE}Zen${RESET}"
+#     local dir="%~"
+#
+#     # Set the prompt with a newline before the actual prompt
+#     PROMPT="${user_host} ${dir} "
+#     RPROMPT=""
+# }
+#
+# # Call the function to set the prompt
+# set_prompt
+#
+# # Update the prompt when the directory changes
+# autoload -U add-zsh-hook
+# add-zsh-hook chpwd set_prompt
+eval "$(zellij setup --generate-auto-start zsh)"
+
+
+# Herd injected NVM configuration
+export NVM_DIR="/Users/no1/Library/Application Support/Herd/config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+
+# Herd injected PHP binary.
+export PATH="/Users/no1/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/no1/Library/Application Support/Herd/config/php/82/"
