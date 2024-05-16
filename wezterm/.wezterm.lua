@@ -29,7 +29,7 @@ end
 -- config.color_scheme = scheme_for_apperance(wezterm.gui.get_apperanace()) -- get the current theme
 
 config.font = wezterm.font("OperatorMonoSSmLig Nerd Font")
-config.font_size = 14.0
+config.font_size = 15.0
 -- config.font_weight
 config.cursor_blink_rate = 800
 
@@ -65,17 +65,12 @@ config.keys = {
 		mods = "CMD",
 		action = wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
 	},
-}
-
-config.keys = {
-	-- Disable Cmd+T (or Super+T on some systems)
 	{
+		-- Disable Cmd+T (or Super+T on some systems)
 		key = "t",
 		mods = "CMD",
 		action = wezterm.action.DisableDefaultAssignment,
 	},
 }
--- config.send_composed_key_when_left_alt_is_pressed = true
--- config.send_composed_key_when_right_alt_is_pressed = true
 
 return config

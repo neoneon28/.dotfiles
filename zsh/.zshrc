@@ -72,7 +72,7 @@ alias vim="nvim" #set default VIM to Neovim
 
 # |======  LS replaement  ======|
 
-alias ls="eza --icons=always --ignore-glob='.git'"
+alias ls="eza --icons=always --git-ignore --ignore-glob='node_modules'"
 alias ll="ls -l "
 alias la="ls -la"
 alias lla="ls -la"
@@ -85,7 +85,7 @@ alias e="exit"
 alias btop="bpytop"
 
 # |======  Zellij  ======|
-alias zel="zellij --layout ~/.config/zellij/config/layouts/dev.kdl"
+alias zel="zellij --layout ~/.config/zellij/configs/layouts/dev.kdl"
 alias zeldc="vim ~/.config/zellij/config/layouts/dev.kdl"
 
 # |======  Kitty  ======|
@@ -93,8 +93,8 @@ alias krc="vim ~/.config/kitty/kitty.conf"
 
 # |======  TMUX  ======|
 alias tl="tmux ls"
-alias ta="tmux attach -d"
 alias tad="tmux attach -d -t"
+alias ta="tmux attach -d"
 alias ts="tmux new-session -s"
 alias tksv="tmux kill-server"
 alias tkss="tmux kill-session -t"
@@ -125,10 +125,13 @@ alias zrc="vim ~/.zshrc"
 alias nrc="vim ~/.config/nvim/init.lua" # init.lua
 alias arc="vim ~/.alacritty.yml" # alacritty
 alias wrc="vim ~/.wezterm.lua" # wezterm
-alias krc="vim ~/.config/kitty/kitty.conf" # wezterm
 alias skrc="vim ~/.skhdrc" # skhdrc
 alias trc="vim ~/.tmux.conf" # tmux rc
 alias zelrc="vim ~/.config/zellij/config.kdl" zellij rc
+
+# |======  Karabiners Config ======|
+alias krc="vim ~/.config/karabiner/karabiner.json" # karabiner elements
+alias logk="tail -f ~/.local/share/karabiner/log/console_user_server.log"
 
 # |====== Laravel Aliases  ======|
 alias art="php artisan"
@@ -215,6 +218,7 @@ mcd() {
 # # Update the prompt when the directory changes
 # autoload -U add-zsh-hook
 # add-zsh-hook chpwd set_prompt
+
 eval "$(zellij setup --generate-auto-start zsh)"
 
 

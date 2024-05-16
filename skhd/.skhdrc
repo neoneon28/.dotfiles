@@ -140,8 +140,8 @@ shift + alt - 0 : yabai -m window --space 10;
 
 ctrl + alt - s : yabai --stop-service;
 # ctrl + alt - r : yabai --restart-service;
-
 ctrl + alt + cmd - r : yabai --restart-service;
+
 
 cmd - return : open -n -a "wezterm"
 cmd + shift - return : open -a Finder
