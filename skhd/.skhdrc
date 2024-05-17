@@ -138,10 +138,8 @@ shift + alt - 8 : yabai -m window --space 8;
 shift + alt - 9 : yabai -m window --space 9;
 shift + alt - 0 : yabai -m window --space 10;
 
-ctrl + alt - s : yabai --stop-service;
-# ctrl + alt - r : yabai --restart-service;
+ctrl + alt + cmd - o : yabai --stop-service; # o for stOp
+ctrl + alt + cmd - y : yabai --restart-service; # y for yabai so restart yabai
 
-ctrl + alt + cmd - r : yabai --restart-service;
-
-cmd - return : open -n -a "wezterm"
+cmd - return : open -n -a "wezterm.app"
 cmd + shift - return : open -a 'Finder.app'
